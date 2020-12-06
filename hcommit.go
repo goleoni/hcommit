@@ -73,12 +73,14 @@ func main() {
 	fullMessageStringified := strings.Join(fullMessageArray, " ")
 	templatemsg = templatemsg + " " + fullMessageStringified
 
-	out, err := exec.Command("git", "commit", "-m", "\""+templatemsg+"\"").Output()
+	out, err := exec.Command("git", "commit", "-m", templatemsg).Output()
 	if err != nil {
 		fmt.Printf("%s", err)
+		return
 	}
 
 	output := string(out[:])
+
 	fmt.Println(output)
 
 	fmt.Println("\n Commited successfully!")

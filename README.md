@@ -8,6 +8,30 @@ This should get metrics like "how many commits from that project have on your re
 
 Can be a good alternative o manage the timesheet of developers.
 
+# Snap
+
+This project should be downloaded on snap repositories manager:
+
+## Development
+
+### Clean the actual snapping test
+
+`snapcraft clean hcommit -s pull`
+
+### Creating a testing snap to tests locally
+
+Generating the snap:
+
+`snapcraft`
+
+To test the development of project, should be used:
+
+`sudo snap install hcommit_1.0_amd64.snap --dangerous`
+
+## To send to the market
+
+https://www.digitalocean.com/community/tutorials/how-to-package-and-publish-a-snap-application-on-ubuntu-18-04-pt
+
 # Usage
 
 ## Setting the global commit context

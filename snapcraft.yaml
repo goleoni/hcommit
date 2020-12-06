@@ -1,12 +1,12 @@
 name: hcommit
-summary: A happy commiter for git projects with emojis and a basic scope for the messages.
+summary: A commiter for git projects with emojis and a basic ctx for the messages.
 description: |
   Happy commit will turn your commit messages more beautyfull, with emojis and a contexts to than.
   The context should be a poject key of your company.
   This should get metrics like "how many commits from that project have on your repository".
   Can be a good alternative o manage the timesheet of developers.
 version: '1.0'
-confinement: strict
+confinement: classic
 
 apps:
   hcommit:
@@ -19,7 +19,5 @@ parts:
     go-importpath: hcommit
 
 plugs:
-  hcommit-home:
-    interface: home
   hcommit-network:
     interface: network
